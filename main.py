@@ -21,7 +21,7 @@ class ATM():
             f_name = input("Enter your first name: ")
             S_name = input("Enter your second name: ")
             age = int(input("Enter your age: "))
-            #balance =  0
+            balance =  0
             phone_number = input("Enter your mobile number: ")
             if age < 18: 
                 print("You must be 18+!")
@@ -55,7 +55,7 @@ class ATM():
                 print("MySql has been closed ")
 
         
-    def check_balance(self,):
+    def check_balance(self):
         db=mc.connect(
                 host="localhost",
                 user="Nicholas",
@@ -142,4 +142,9 @@ class ATM():
 
 
 
-#ATM.check_balance()
+# ATM.check_balance()
+
+object = ATM
+
+def main():
+    object

@@ -1,6 +1,6 @@
 import mysql.connector as mc
 from hashing import store_hash, check_user_pin
-
+from binarySearch import sort, bsa
 
 def create_account():
     db = mc.connect(
@@ -20,7 +20,8 @@ def create_account():
         print("You must be 18+!")
     else:
         query = "INSERT INTO accounts(email,first_name, second_name, age, phone_number) VALUES (%s,%s,%s,%s,%s)"
-        data = (str(email), str(f_name), str(S_name), str(age), str(phone_number))
+        # data = (str(email), str(f_name), str(S_name), str(age), str(phone_number))
+        data = (email,f_name, S_name, age, phone_number)
         mine.execute(query, data)
 
 
@@ -100,7 +101,7 @@ def check_balance():
                 break 
             else:
                 print("Wrong pin.")
-                continue 
+                break 
 
 def withdraw():
         db=mc.connect(
@@ -153,11 +154,12 @@ def run():
         userID = input("->")
         query = f"SELECT userID FROM accounts "
         mine.execute(query)
-        result = mine.fetchall()
+        results = [result[0] for result in mine.fetchall()]
+        result = sort(results)     
         
-        for i in result[0:]:
+        for i in results: 
             while True: 
-                if userID == i:
+                if bsa(int(userID),result):
                     print("\n ATM menu")
                     print("\n 1. Check balance")
                     print("\n 2. Withdraw Money")
@@ -179,6 +181,7 @@ def run():
                     else:
                         print("Invalid Choice. Please try again.")
                         continue
+
                 
                 else:
                     print("Invalid Input. User ID not found!")
@@ -200,7 +203,8 @@ def run():
         db.close()
 
 #create_account()
-#run()
+run()
+
 #withdraw()
-deposit()
-check_balance()
+#deposit()
+#check_balance()
