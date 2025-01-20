@@ -5,8 +5,8 @@ from binarySearch import sort, bsa
 def create_account():
     db = mc.connect(
         host="localhost",
-        user="Nicholas",
-        passwd="nicholas",
+        user="x",
+        passwd="x",
         database="users_info")
 
     mine = db.cursor()
@@ -51,8 +51,8 @@ def create_account():
 def deposit():
         db = mc.connect(
              host="localhost",
-             user="Nicholas",
-             passwd="nicholas",
+             user="x",
+             passwd="x",
              database="users_info"
         )
         mine =db.cursor()
@@ -83,8 +83,8 @@ def deposit():
 def check_balance():
         db=mc.connect(
                 host="localhost",
-                user="Nicholas",
-                passwd="nicholas",
+                user="x",
+                passwd="x",
                 database="Users_info")
                                     
         mine = db.cursor()
@@ -106,8 +106,8 @@ def check_balance():
 def withdraw():
         db=mc.connect(
                 host="localhost",
-                user="Nicholas",
-                passwd="nicholas",
+                user="x",
+                passwd="x",
                 database="Users_info") 
                                     
         mine = db.cursor()
@@ -145,8 +145,8 @@ def withdraw():
 def run():
         db=mc.connect(
               host="localhost",
-              user="Nicholas",
-              passwd="nicholas",
+              user="x",
+              passwd="x",
               database="Users_info"
         )
         mine = db.cursor()
