@@ -3,8 +3,8 @@ import mysql.connector as mc
 def run():
         db=mc.connect(
               host="localhost",
-              user="Nicholas",
-              passwd="nicholas",
+              user="x",
+              passwd="x",
               database="Users_info"
         )
         mine = db.cursor()
