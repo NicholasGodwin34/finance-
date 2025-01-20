@@ -11,8 +11,8 @@ class ATM():
         try:
             db=mc.connect(
                 host="localhost",
-                user="Nicholas",
-                passwd="nicholas",
+                user="x",
+                passwd="x",
                 database="Users_info")
                                     
             mine = db.cursor()
@@ -58,8 +58,8 @@ class ATM():
     def check_balance(self):
         db=mc.connect(
                 host="localhost",
-                user="Nicholas",
-                passwd="nicholas",
+                user="x",
+                passwd="x",
                 database="Users_info")
                                     
         mine = db.cursor()
@@ -86,8 +86,8 @@ class ATM():
     def deposit(self,amount):
         db=mc.connect(
                 host="localhost",
-                user="Nicholas",
-                passwd="nicholas",
+                user="x",
+                passwd="x",
                 database="Users_info")
                                     
         mine = db.cursor()
@@ -107,8 +107,8 @@ class ATM():
     def withdraw(self):
         db=mc.connect(
                 host="localhost",
-                user="Nicholas",
-                passwd="nicholas",
+                user="x",
+                passwd="x",
                 database="Users_info") 
                                     
         mine = db.cursor()
