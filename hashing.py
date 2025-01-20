@@ -10,8 +10,8 @@ def store_hash(userID, pin):
     db = mc.connect(
         host='localhost',
         database='users_info',
-        user='Nicholas',
-        passwd='nicholas'
+        user='x',
+        passwd='x'
     )
     c=db.cursor()
     hashed_pin = hash_pin(pin)
