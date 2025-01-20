@@ -33,8 +33,8 @@ def check_user_pin(userID, input_pin):
     db = mc.connect(
         host='localhost',
         database= 'users_info',
-        user='Nicholas',
-        passwd='nicholas'
+        user='x',
+        passwd='x'
     )
 
     c = db.cursor()
